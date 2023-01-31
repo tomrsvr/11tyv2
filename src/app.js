@@ -164,3 +164,25 @@ document.addEventListener("DOMContentLoaded", function() {
       window.addEventListener("orientationChange", lazyload);
     }
   })
+
+
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.anim');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.anim .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 4950,
+    delay: (el, i) => 270*i
+  }).add({
+    targets: '.anim',
+    opacity: 0,
+    duration: 99991000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });

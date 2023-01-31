@@ -26,6 +26,55 @@ main {
   margin-top: -2.6em;
 }
 
+.anix {
+  opacity: 0;
+  transition: animation 3.5s ease;
+  animation: fadeIn .5s .4s forwards;
+  -webkit-animation: fadeIn .5s .4s forwards;
+}
+
+.ani1 { animation-delay: 300ms; }
+.ani2 { animation-delay: 300ms; }
+.ani3 { animation-delay: 600ms; }
+.ani4 { animation-delay: 700ms; }
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
+// scrolling
+
+.hidden {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  &:where(.left) {
+    transform: translateX(-100%);
+  }
+  &:where(.down) {
+    transform: translateY(150%);
+  }
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+// .hidden.mention {
+//   transition: all 2s ease-in-out;
+// }
+
+
+$delay: 100ms;
+@for $i from 1 to 7 {
+  .mention:nth-child(n + #{$i}) {
+    transition-delay: ($delay*$i + 100ms);
+  }
+}
+
+
 section {
   .container {
       max-width: 900px;
@@ -182,6 +231,28 @@ a {
     color: inherit;
     font-family: inherit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1144,6 +1215,19 @@ h3.subtitle {
     border-bottom: 1px solid #dadada;
     display: inline-block;
   }
+}
+
+.accolade {
+  background-image:  var(--award-line);
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  color: white!important;
+    margin-top: 0.4rem;
+    padding: 0.2rem 18px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: .8rem!important;
 }
 
 .connector {

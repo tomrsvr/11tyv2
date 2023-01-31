@@ -137,10 +137,10 @@ strong {
   font-weight: var(--fw-700);
 }
 
-section,
+/* section,
 .section {
-  padding: min(10vh, 10em) 0;
-}
+  padding: min(10vh, 10em) 0; -> Good reference RECHECK
+} */
 
 
 

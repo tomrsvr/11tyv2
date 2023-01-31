@@ -731,6 +731,13 @@ mark {
     justify-content: center;
     background: linear-gradient(to bottom, #eee, #e4dfd6);
 
+
+    //experiment recheck
+    background: linear-gradient(to bottom, #fefefe, #e4dfd69c), url(/assets/tokyo.svg), linear-gradient(to bottom, #eee, #e4dfd6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+
     .person {
       max-width: 12rem;
       position: relative;

@@ -119,7 +119,7 @@ select {
   General styling
   /////////////////////// */
 
-body {
+/* body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
@@ -131,7 +131,7 @@ h3 {
   font-family: var(--ff-heading);
   font-weight: var(--fw-900);
   line-height: 1.1;
-}
+} */
 
 strong {
   font-weight: var(--fw-700);
@@ -178,10 +178,10 @@ section,
 
 /* typgraphy */
 
-.article-title,
+/* .article-title,
 .section-title {
   color: var(--clr-primary-500);
-}
+} */
 
 .article-title {
   font-size: var(--fs-700);

@@ -6,10 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
 
+
+
+    <meta name="description" content="{{ description }}">
+    
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F16232" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700..900&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet"> 
+
+    <!-- Fonts — "Defer CSS" kudos @ Nikita Hlopov-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Unica+One&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
@@ -21,5 +37,7 @@
     </main>
 
     {% include "footer.njk" %}
+
+    <script defer src="/app.js" ></script>
 </body>
 </html>

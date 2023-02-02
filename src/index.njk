@@ -7,7 +7,7 @@ layout: 'base.njk'
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 
-<section class="header-content" id="home">
+<section class="header-content" id="hero">
             <div class="container">
                 <div class="atf">
                     <div class="person anix ani1">
@@ -17,12 +17,23 @@ layout: 'base.njk'
                         </div>
                     </div>
 
-                    <div class="content postcard">
-                    <h3 class="catch anix ani2">Designing moments <span>that matter</span><mark class="anim">in travel</mark></h3>
+                    <div class="content postcard" id="postcard">
 
-                    <style>
-                        
-                    </style>
+                        <img class="stamp" src="/assets/stamp.png" alt="">
+
+                        <style>
+                            div#postcard {
+                                background: #fafafa;
+                            }
+
+                            img.stamp {
+                                position: absolute;
+                                right: 1em;
+                                top: 2em;
+                            }
+                        </style>
+
+                        <h3 class="catch anix ani2">Designing moments <span>that matter</span><mark class="anim">in travel</mark></h3>
 
                         <div class="accent anix ani2" aria-hidden="true"></div>
 
@@ -40,7 +51,8 @@ layout: 'base.njk'
                                         <span class="firm">@ Japan Travel</span>
                                     </div>
                                 </p>
-                            </div>
+                            </div>  
+                            
                             <div class="view">
                                 <a class="scroll" href="#contentStart">View more</a>
                             </div>

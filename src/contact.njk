@@ -1,0 +1,54 @@
+---
+title: Contact Tom - Creative in Japan
+description: Tom is a British creative leader based in Tokyo, inspiring teams to craft memorable and easy-to-use digital experiences.
+layout: 'base.njk'
+---
+
+<script defer src="https://www.google.com/recaptcha/api.js?render=6LcgcKojAAAAAKTL-GPvdxllSwgXr37mv3OpeZq6"></script>
+      <script>
+          grecaptcha.ready(function () {
+              grecaptcha.execute('6LcgcKojAAAAAKTL-GPvdxllSwgXr37mv3OpeZq6', {action: 'submit'}).then(function (token) {
+                  console.info("got token: " + token);
+                  document.getElementById('g-recaptcha-response').value = token;
+              });
+          });
+</script>
+
+<section class="bg">
+    <img class="blob" src="/assets/blob1.svg" alt="">
+    <img class="blob2" src="/assets/blob1.svg" alt="">
+    <img class="blob3" src="/assets/blob1.svg" alt="">
+</section>
+<section class="contact2">
+    <div class="container">
+        <div class="hero-form">
+            <div class="text-content">
+                <span class="super-text" lang="ja">お問い合わせ</span>
+                <h1>Get in touch</h1>
+
+                <p>Thanks for your interest in connecting.</p>
+                <p>Fill in the form, or, if you prefer, <a href="mailto:hello@tomroseveare.com">send over an email</a></p>
+            </div>
+            <div class="form-content">
+                <form action="https://formspree.io/f/xoqzarwk" method="POST">
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="user_name" placeholder="Your name" />
+                    </div>
+                    <div class="form-field">
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail" name="user_mail" placeholder="Your email"/>
+                    </div>
+                    <div class="form-field">
+                        <label for="msg">Message</label>
+                        <textarea id="msg" name="user_message" placeholder="Your message"></textarea>
+                    </div>
+                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+                    <button type="submit">Say hello</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>

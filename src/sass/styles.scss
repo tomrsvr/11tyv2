@@ -14,6 +14,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    color-scheme: dark light;
 }
 
 
@@ -578,13 +579,16 @@ header {
         background: linear-gradient(to bottom, #eee, #e4dfd6);
         padding: 2em;
         transform: skew(-4deg, 6deg);
-        border-radius: 12px;
+        border-radius: 5px;
         box-shadow: 0 30px 100px -27px rgb(0 0 0 / 30%);
+        span.l2 {
+          display: block;
+        }
       }
 
 
       h1 {
-        margin-bottom: 0.6rem;
+        // margin-bottom: 0.6rem;
         font-size: 1.4rem;
         rt {
           opacity: 0;
@@ -599,80 +603,83 @@ header {
       }
 
       div.accent {
-        height: 2px;
+        height: 10em;
         background: var(--color-gold);
         border-radius: 10px;
         max-width: 13em;
-        margin: 1em 00 5em;
+        position: absolute;
+        left: 44%;
+        width: 1px;
+        top: 7rem;
+        opacity: .3;
       }
 
       p.intro {
-        font-size: 1.4rem;
-        max-width: 22em;
+        font-size: 1rem;
+        max-width: 20em;
         font-weight: 500;
         margin: 0;
         padding: 0;
+        line-height: 1.7;
       }
-      .scroll {
-        color: var(--color-grey3);
-        display: inline-block;
-        // margin-left: auto;
-        position: absolute;
-        left: 0;
-        bottom: -5rem;
-        z-index: 5;
-        transform-origin: top;
-        text-transform: uppercase;
-        max-width: 4rem;
-        font-weight: 300;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        &:after {
-          content: "";
-          width: 1px;
-          height: 40px;
-          background-color: var(--color-grey2);
-          display: block;
-          position: absolute;
-          top: 0;
-          left: -25%;
-          transform: scaleX(0);
-          animation: 3s ease 1.5s normal infinite scroll;
-          pointer-events: none;
-          @keyframes scroll {
-  
-            /* Switch origin when initial scaleY animation finishes, then reset. Original uses transform: rotate(90deg);  and scaleX/left/right instead of scaleY/top/bottom.
-            */
-            0% {
-              -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-              -webkit-transform-origin: top;
-              transform-origin: top; }
-            30% {
-              -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-              -webkit-transform-origin: top;
-              transform-origin: top; }
-            31% {
-              -webkit-transform: scaleY(1);
-              transform: scaleY(1);
-              -webkit-transform-origin: bottom;
-              transform-origin: bottom; }
-            60% {
-              -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-              -webkit-transform-origin: bottom;
-              transform-origin: bottom; }
-            100% {
-              -webkit-transform: scaleY(0);
-              transform: scaleY(0);
-              -webkit-transform-origin: top;
-              transform-origin: top; } 
-          }
-        }
       
-      }
     }
+
+}
+
+.scroll {
+  color: var(--color-grey3);
+  display: inline-block;
+  z-index: 5;
+  transform-origin: top;
+  text-transform: uppercase;
+  max-width: 4rem;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  &:after {
+    content: "";
+    width: 1px;
+    height: 40px;
+    background-color: var(--color-grey2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -25%;
+    transform: scaleX(0);
+    animation: 3s ease 1.5s normal infinite scroll;
+    pointer-events: none;
+    @keyframes scroll {
+
+      /* Switch origin when initial scaleY animation finishes, then reset. Original uses transform: rotate(90deg);  and scaleX/left/right instead of scaleY/top/bottom.
+      */
+      0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: top;
+        transform-origin: top; }
+      30% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: top;
+        transform-origin: top; }
+      31% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom; }
+      60% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: bottom;
+        transform-origin: bottom; }
+      100% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: top;
+        transform-origin: top; } 
+    }
+  }
 
 }
 
@@ -824,48 +831,6 @@ mark {
         line-height: 2rem;
     }
 
-      .current {
-        
-        .label {
-          display: block;
-          text-transform: uppercase;
-          color: var(--color-grey4);
-          font-weight: 300;
-          font-size: .8rem;
-          letter-spacing: 1px;
-        }
-        .position {
-          border: 1px solid grey;
-          display: inline-block;
-          background-color: var(--color-white);
-          box-shadow: 4px 4px rgba(193, 40, 47,1);
-          border-radius: 10px;
-          .role { 
-            font-weight: 600;
-            padding:0.6rem .8rem .2rem;
-            // color: #c1282f;
-            // box-shadow: 0 7px 29px -13px rgba(0,0,0,.2);
-            border: 1px solid var(--role-border);
-            transition: var(--default-transition);
-            display: inline-block;
-          }
-          hr {
-            // width: 56%;
-            width: 100%;
-            margin: 5px auto;
-          }
-          .firm {
-            display: block;
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: 400;
-            /* text-align: center; */
-            padding: 0.3rem 0.8rem 0.6rem;
-          }
-        }
-        
-      }
-
     div.current {
         padding-top: 15px;
     }
@@ -873,8 +838,8 @@ mark {
       } 
     
     ruby.name {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        margin-bottom: .8rem;
         color: var(--color-secondary);
         rt {
             font-size: .8rem;
@@ -884,7 +849,47 @@ mark {
     }
 
 
-
+    .current {
+        
+      .label {
+        display: block;
+        text-transform: uppercase;
+        color: var(--color-grey4);
+        font-weight: 300;
+        font-size: .8rem;
+        letter-spacing: 1px;
+      }
+      .position {
+        border: 1px solid grey;
+        display: inline-block;
+        background-color: var(--color-white);
+        box-shadow: 4px 4px rgba(193, 40, 47,1);
+        border-radius: 10px;
+        .role { 
+          font-weight: 600;
+          padding:0.6rem .8rem .2rem;
+          // color: #c1282f;
+          // box-shadow: 0 7px 29px -13px rgba(0,0,0,.2);
+          border: 1px solid var(--role-border);
+          transition: var(--default-transition);
+          display: inline-block;
+        }
+        hr {
+          // width: 56%;
+          width: 100%;
+          margin: 5px auto;
+        }
+        .firm {
+          display: block;
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 400;
+          /* text-align: center; */
+          padding: 0.3rem 0.8rem 0.6rem;
+        }
+      }
+      
+    }
 
 
 // HP MEDIA
@@ -916,8 +921,46 @@ mark {
 }
 
 
+// BLOG
 
+.blog .wrapper {
+  display: flex;
+  flex-grow: 33%;
+  background: initial;
+  padding: initial;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.blog a {
+  min-width: 0;
+  width: 280px;
+  margin-bottom: 1.4em;
+}
+.blog a:hover img {
+  box-shadow: 0 10px 20px -10px rgb(0 0 0 / 30%);
+  transition: all .2s ease-in-out;
+}
+.blog .img-container {
+  position: relative;
+}
+.blog img.thumbnail {
+  max-width: 100%;
+  border-radius: 10px;
+}
 
+.blog h3.title {
+  padding: 0.4em 0;
+}
+
+.blog span.date {
+  color: #5d5d5d;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+section#featured-articles {
+  display: none;
+}
 
 
 
@@ -938,8 +981,8 @@ h2.section-title {
 
 section {
     &.appearances {
-    // padding: 6rem 0;
     background-color: #eee;
+    padding-block: 3rem;
     }
     &.cta {
       // padding: 6rem 0;
@@ -1045,7 +1088,7 @@ footer {
           justify-items: left;
           .main {
             .copyright {
-              padding-right: 2rem;
+              // padding-right: 2rem;
             }
             .contact {
               display: inline-block;
@@ -1064,8 +1107,47 @@ footer {
   }
 
 
+  footer div.logo {
+    background: #e4dfd6;
+    border-radius: 50%;
+    width: 6em;
+    height: 6em;
+    padding-top: 0.7rem;
+    padding-left: 0.6rem;
+    margin-top: -4rem;
+}
+
+  div.links {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+  }
 
 
+  footer .sns {
+    font-size: 1.2rem;
+}
+
+
+/* HP Blogs */
+
+span.medium {
+  text-align: center;
+  display: block;
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  
+  img {
+    max-width: 7rem;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 
 
@@ -1397,3 +1479,188 @@ h3.subtitle {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// CONTACT PAGE
+
+.h-shape {
+  transition: all .4s ease-in-out;
+  width: 65%;
+  height: 100%;
+  background-color: var(--color-secondary) ;
+  position: absolute;
+  left: 0;  
+  top: 0;
+  z-index: 0;
+  clip-path: polygon(0 0, 44% 0, 100% 100%, 0% 100%);
+}
+
+img.blob {
+  position: absolute;
+  top: 0;
+  left: -13rem;
+  width: 36rem;
+}
+
+// v2
+
+section.bg {
+  clip-path: polygon(0 0, 70% 0, 40% 100%, 0% 100%);
+  background: var(--color-secondary);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  transition: all .4s ease-in-out;
+}
+
+.hero-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  align-items: flex-start;
+  align-content: flex-end;
+  // height: calc(100svh*.5);
+  margin-top: 3em;
+}
+
+.contact2 {
+  height: 100svh;
+  .container {
+    height: 100svh;
+  }
+}
+
+
+.contact2 input, .contact2 textarea {
+  background: #f1f4f7;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  padding: .8em;
+  font-size: 1rem;
+  font-weight: 300;
+  flex: 1;
+  &::placeholder {
+    color: #aaaaaa;
+  }
+}
+.contact2 textarea {
+  min-height: 10em;
+}
+
+.contact2 .text-content {
+  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 25px;
+    color: white;
+  }
+  span {
+    color: white;
+    background: grey;
+    padding: 0.4em 1em;
+    border-radius: 10em;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0,.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(9.8px);
+  }
+  p {
+    color: white;
+    margin-top: 1em;
+    max-width: 17em;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+img.blob3 {
+    position: absolute;
+    top: 0;
+    left: -1em;
+    z-index: 10000;
+    width: 68em;
+    overflow: visible;
+    opacity: .5;
+    transform: rotate(45deg);
+}
+
+.contact2 .form-content {
+  width: 500px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 30px 60px -12px rgba(50,50,93,0.25),0 18px 36px -18px rgba(0,0,0,0.3);
+  padding: 16px;
+  form .form-field {
+    display: flex;
+    margin: 1em;
+    label {
+      flex-basis: 7em;
+      font-size: 1rem;
+      align-self: center;
+      font-weight: 600;
+    }
+  }
+  button {
+    float: right;
+    margin-right: 1.4em;
+    background: var(--color-secondary);
+    border: 0;
+    color: white;
+    padding: 0.8em 2em;
+    border-radius: 30px;
+  }
+} 
+
+@media screen and (max-width: 700px) {
+  section.bg {
+    clip-path: polygon(0 0, 100% 0, 60% 100%, 0% 100%);
+    position: fixed;
+  }
+  .hero-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: inherit;
+    margin-top: 1em;
+  }
+  .contact2 .form-content {
+    width: auto;
+    margin-bottom: 2em;
+    form .form-field {
+      flex-direction: column;
+      label {
+        flex-basis: 1.5em;
+        width: 100%;
+      }
+    }
+  }
+
+  .contact2 .text-content h1 {
+    // mix-blend-mode: difference;
+    font-size: 2rem;
+  }
+  
+}
+
+
+@import './media';

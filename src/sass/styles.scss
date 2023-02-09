@@ -755,7 +755,8 @@ img.stamp {
       position: relative;
 
       &.postcard {
-        background: linear-gradient(to bottom, #eee, #e4dfd6);
+        // background: linear-gradient(to bottom, #eee, #e4dfd6);
+        background-image: linear-gradient(336deg, rgb(255 255 255 / 80%), rgb(255 255 255 / 90%) 70.71%), url(/assets/washi.webp);
         padding: 2em;
         transform: skew(-4deg, 6deg);
         border-radius: 5px;
@@ -1239,43 +1240,24 @@ section {
 
 
 .skills {
-  background-color: var(--color-secondary);
+  background-color: var(--color-white);
+  background-image: linear-gradient(336deg, rgb(255 255 255 / 80%), rgb(255 255 255 / 69%) 70.71%), url(/assets/washi.webp);
 }
-
 
 .skills ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem 0 2rem;
+  margin: 3rem auto;
+  max-width: 750px;
   li {
     margin: 0.25em;
-    padding: 0.25em 0.5em;;
+    padding: 0.45em 1.4em;
     background: white;
     border-radius: 5px;
+    box-shadow: 0 3px 20px -10px rgb(0 0 0 / 30%);
   }
 }
-
-.skills .container::before {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: 300ms -webkit-transform ease-in;
-  transition: 300ms -webkit-transform ease-in;
-  transition: 300ms transform ease-in;
-  transition: 300ms transform ease-in, 300ms -webkit-transform ease-in;
-  background-image: radial-gradient(rgba(255, 0, 0, 0) 20%, #b3f8f1 20%, #b3f8f1 25%, rgba(255, 0, 0, 0) 25%, rgba(255, 0, 0, 0) 30%, #b3f8f1 30%, #b3f8f1 40%, rgba(255, 0, 0, 0) 40%, rgba(255, 0, 0, 0) 45%, #b3f8f1 45%, #b3f8f1 50%, rgba(255, 0, 0, 0) 50%);
-  opacity: 0.8;
-  content: "";
-  z-index: -1;
-}
-
-
 
 // FOOTER
 

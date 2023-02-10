@@ -1277,6 +1277,15 @@ footer {
           align-items: center;
           justify-items: left;
           .main {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+              filter: grayscale(1);
+              border-radius: 50%;
+              background: rgb(228 223 214);
+              max-width: 4rem;
+            }
             .contact {
               display: inline-block;
             }
@@ -1714,9 +1723,9 @@ section.contact2 {
   background: var(--color-secondary);
   // height: 100svh;
   position: relative;
-  .container {
-    height: 100svh;
-  }
+  // .container {
+  //   height: 100svh;
+  // }
   picture {
     width: 100%;
     height: 100%;
@@ -1853,6 +1862,7 @@ img.blob3 {
   .contact2 .form-content {
     width: auto;
     margin-bottom: 2em;
+    padding: 8px;
     form .form-field {
       flex-direction: column;
       label {

@@ -439,8 +439,20 @@
                 grid-template-columns: 1fr;
                 align-self: center;
                 justify-items: center;
+                img {
+
+                    margin: 0 auto;
+                    position: absolute;
+                    top: -2.5em;
+                    left: 0;
+                    right: 0;
+                    box-shadow: 0 5px 14px -11px;
+                }
                 .sns {
                     justify-self: center;
+                }
+                .copyright {
+                    order: 3;
                 }
         }
         

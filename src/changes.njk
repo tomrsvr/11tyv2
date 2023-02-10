@@ -1,0 +1,170 @@
+---
+title: Changelog Tom - Creative in Japan
+headline: Changelog
+headlineJa: 色々
+description: Tom is a British creative leader based in Tokyo, inspiring teams to craft memorable and easy-to-use digital experiences.
+layout: 'base.njk'
+---
+
+{% include "hero.njk" %}
+
+
+<section class="intro">
+        <div class="container">
+            <h2 class="section-title">The Code Journey</h2>
+
+            <div class="grid">
+
+                <div class="left">
+
+                    <p class="intro">Documenting the process behind the creation of this website  ✌️</p>
+
+                    <details>
+                        <summary>v0.1 — N/A — 25 Nov 2022</summary>
+                        <ul>
+                            <li>Initial setup: GitHub account creation, repository setup, Visual Code Studio, installed git</li>
+                            <li>Published sample page</li>
+                            <li>Domain transfer from Mailchimp to Porkbun</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>v1 — Azuki — 4 Dec 2022</summary>
+                        
+                           <ul>
+                            <li>Cloudflare setup</li>
+                            <li>Domain connected to Github, and first site launch on Github Pages</li>
+                            <li>Additions of media mentions, typewriter effect, and animated background gradients, AI-generated avatars</li>
+                            <li>Requested domain auth code</li>
+                           </ul>
+                    </details>
+
+
+                    <details>
+                        <summary>v2 — Bento — 17 Jan 2023</summary>
+                        
+                           <ul>
+                            <li>New multipage site pushed live</li>
+                            <li>Fixes to timeline, file extensions</li>
+                            <li>Switch from animation/absolute sections, to grid and flexbox</li>
+                            <li>Mobile menu (via Codepen TBC)</li>
+                            <li>JS-based scroll animation support</li>
+                            <li>New contact form via TBC</li>
+                            <li>Domain management moved to Cloudflare, email setup in Sendinblue</li>
+                            <li>Web Story experimentation</li>
+                           </ul>
+                    </details>
+
+                    <div class="accent" aria-hidden="true"></div>
+                    
+                    <!-- ref: https://dev.to/link2twenty/native-html-accordion-2fma -->
+
+
+                    <p>To explore in future: Ajax, web components, Jekyll/Vue</p>
+
+                    <!-- <h3 class="subtitle">Why this page?</h3>
+
+                    <p>Although I primarily lead teams of creatives, I've realised I needed my own space to demonstrate my technical knowledge and personal brand. Secondly, I want to show how setting up a website does not involve huge upfront costs.</p>
+
+                    <p>I initially had a custom WordPress back in 2014, which I initially shelved for two main reasons:</p>
+                    <ul> 
+                        <li>Learning PHP to the degree needed to develop a custom WordPress theme i.e. specialise solely in WordPress, did not necessarily appeal to me so I dug a hole setting up a templated yet heavily-customed site.</li>
+                        <li>Secondly, the cost of hosting a website seemed harder to justify the less I found myself updating the site but also the negligible amount of data actually being hosted.</li>
+                        
+                    </ul>
+                    
+                    <p>I guess being within WordPress and not developing it created a self-imposed creative restriction I wrestled with.</p>
+
+                    <p>Fast-forward to 2022 and it feels like the landscape for static-sites has evolved quite a bit—not to mention the spec for HTML and CSS. With the barriers to entry lower than ever to prospective coders, I realised I needed full control even with relatively straightforward needs.</p> -->
+                        
+                    <style>
+
+                    .grid p {
+                        padding: 1rem 0;
+                        font-size: 1rem;
+                        max-width: 700px;
+                    }
+                    .grid li {
+                        padding: 1rem 0;
+                        font-size: 1rem;
+                        max-width: 700px;
+                        list-style-type: disc;
+                        margin-left: 1em;
+                    }
+
+.intro .grid {
+    grid-template-columns: repeat(1, 1fr); /*overriding main*/
+}
+
+details {
+	display:block; 
+	/* width:300px; */
+	margin:10px 0;
+}
+summary {
+	display:block; 
+	background:transparent;
+    border: 1px solid #e8e8e8;
+	color: black;
+	border-radius:5px;
+	padding:5px;
+	cursor:pointer;font-weight:bold;
+}
+
+summary::-webkit-details-marker {
+   color:#FF0000; 
+   background:#FFFFFF; 
+}
+
+details[open] summary::-webkit-details-marker {
+   color:#0000FF; 
+   background:#00FFFF;
+}
+summary::-webkit-details-marker {
+   display: none
+}
+
+summary:after {
+   content: "+";
+   color: #FFFFFF;
+   float: left;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin: -5px 5px 0 0;
+   padding: 0;
+   text-align: center;
+   width: 20px;
+}
+
+details[open] summary:after {
+   content: "-";
+  color: #FFFFFF
+}
+
+details li {
+    list-style-type: initial;
+    padding: 0.8em 0.6em;
+    margin-left: 3.4em;
+}
+                    </style>
+
+
+
+
+                       
+
+ </div>
+
+                <!-- <div class="right">
+                    <div class="ws-container">
+                    <a href="/story/pets.html">
+                        <h3>My Web Story</h3>
+                        <span>1/22/33</span>
+                    </a>
+                    </div>
+                </div> -->
+
+                </div><!-- end of grid-->
+        </div>
+
+</section>

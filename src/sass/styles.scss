@@ -217,8 +217,8 @@ section {
     font-weight: 700;
     font-weight: 300;
     letter-spacing: 25px;
+    text-indent: 25px;
     z-index: 2;
-    margin-left: -1.2rem!important; /*centering offset due to letter-spacing shift*/
     span {
       color: var(--color-secondary);
     }
@@ -1361,6 +1361,23 @@ span.medium {
 
   // ABOUT
 
+// big text test
+  span.bg-text.big {
+    right: 1em;
+    font-size: 8em;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+}
+
+section.projects {
+  background: #f6f5f4;
+  z-index: 1;
+  position: relative;
+}
+
+
 
 
   .bg-text {
@@ -1401,10 +1418,15 @@ span.medium {
   section {
     &.hero {
     min-height: 20rem;
-    background: #8080802e;
+    // background: #d2d2d2;
     display: flex;
     justify-content: center;
     flex-direction: column;
+      .container {
+        background: #d2d2d2;
+        max-width: 950px;
+        border-radius: 3rem;
+      }
     }
     &.intro {
         background: var(--color-white);

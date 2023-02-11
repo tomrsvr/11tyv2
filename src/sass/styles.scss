@@ -1365,10 +1365,8 @@ span.medium {
     // top: 50%;
     // left: 50%;
     // bottom: -2rem;
-    left: 0;
-    right: 0;
-    top: 33%;
-    margin: 0 auto;
+    right: -1.4rem;
+    bottom: 0;
   
     // color: var(--color-grey1);
     color: transparent;
@@ -1386,7 +1384,8 @@ span.medium {
     z-index: 1;
     text-align: center;
     font-size: 2rem;
-  
+    writing-mode: tb-rl;
+    mix-blend-mode: difference;
   }
   
   

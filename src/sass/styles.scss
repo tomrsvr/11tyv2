@@ -1318,11 +1318,14 @@ footer {
     font-size: 1rem;
   }
 
-  footer ul {
+  ul {
     display: flex;
     justify-content: space-between;
   }
 
+  .footer-nav li {
+    font-weight: 400;
+  }
 
   footer .sns {
     font-size: 1.2rem;

@@ -434,7 +434,7 @@
         text-align: center;
         color: #5c5e5f;
         .container {
-            padding: 1rem 2rem;
+            padding: 1rem 1rem;
             .fgrid {
                 grid-template-columns: 1fr;
                 align-self: center;
@@ -453,6 +453,9 @@
                 }
                 .copyright {
                     order: 3;
+                }
+                .footer-nav li {
+                    font-size: .9rem;
                 }
         }
         

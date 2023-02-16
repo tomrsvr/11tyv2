@@ -1,9 +1,31 @@
 <li>
-      <article class="snippet">
+    <a href="{{ post.url }}" class="">
+      <article class="snippet2">
         <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
         <h3 class="snippet__title">{{ post.data.title }}</h3>
-        <p class="snippet__meta">by <span> {{ post.data.author }}</span> on {{ post.data.date | postDate }} </p>
+        {# <p class="snippet__meta">by <span> {{ post.data.author }}</span> on {{ post.data.date | postDate }} </p> #}
+        <p class="snippet__meta"> {{ post.data.date | postDate }} </p>
         <p class="snippet__body"> {{ post.data.description }} </p>
-        <a href="{{ post.url }}" class="btn btn--primary">More</a>
       </article>
+    </a>
     </li>
+
+
+    <style>
+
+ul.articles__list.flow {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.articles__list li {
+    border: 1px solid lightgrey;
+    
+}
+article.snippet2 {
+    padding: 2rem;
+}
+
+
+      </style>

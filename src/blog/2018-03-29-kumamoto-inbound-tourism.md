@@ -1,9 +1,9 @@
 ---
-title: My Third Article
-author: Kevin Powell
-date: 2021-05-28
+title: Helping Kumamoto with Inbound Tourism
+author: Tom Roseveare
+date: 2018-03-29
 tags: ['post']
-image: /assets/blog/article-3.jpg
+image: /assets/blog/blog3.webp
 imageAlt: This is a test
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
 ---

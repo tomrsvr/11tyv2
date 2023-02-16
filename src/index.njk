@@ -1,5 +1,6 @@
 ---
 title: Tom Roseveare - Creative in Japan
+pageId: home
 description: Tom is a British creative leader based in Tokyo, inspiring teams to craft memorable and easy-to-use digital experiences.
 layout: 'base.njk'
 ---
@@ -18,13 +19,60 @@ layout: 'base.njk'
                     </div>
 
                     <div class="content postcard" id="postcard">
-                        <img class="stamp" src="/assets/stamp.png" alt="">
+
+                        
+
+                        <style>
+                                .stamp2 .person__circle, .stamp2 .person__container {
+                                    border-radius: 0!important;
+                                }
+
+                                .stamp2 {
+                                    /* position: absolute; */
+                                    /* z-index: 100; */
+                                    -webkit-mask-image: url(/assets/edge3.png);
+                                    -webkit-mask-repeat: round;
+                                }
+
+                                .stamp2.person {
+                                    max-width: 10rem;
+                                }
+
+                                .postcard:before {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    border-width: 0 0 16px 16px;
+                                    border-style: solid;
+                                    border-color: var(--clr-orange) #fff;
+                                    /*for firefox*/
+                                    display: block;
+                                    width: 0;
+                                    }
+
+                        </style>
+
+                       
 
                         <div class="left">
                             <h3 class="catch anix ani2">Designing moments <span class="l2">that matter</span><mark class="anim">in travel</mark></h3>
                         </div>
 
                         <div class="right intro">
+
+                            <img class="stamp" src="/assets/stamp.png" alt="Decorative stamp mark" aria-hidden="true">
+
+                            <div class="stamp2 person anix ani1">
+                                <div class="person__container">
+                                    <img src="assets/tom-ai.webp" alt="Friendly AI-generated likeness of Tom Roseveare" class="person__img" width="192" height="188" draggable="false">
+                                    <div class="person__circle" class="avatar xs bg"></div>
+                                </div>
+                            </div>
+
+
+
+
                             <div class="lines">
                                 <div class="line"></div>
                                 <div class="line"></div>
@@ -75,32 +123,32 @@ layout: 'base.njk'
 
                 <div class="media">
                 
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img src="/assets/medias/jln-logo.webp" alt="Logo for Jalan" width="80" height="27" loading="lazy">
                         </a>
                     </div>
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img class="bright" src="/assets/medias/ylm-logo.webp" alt="Logo for Yahoo Life Magazine" width="80" height="19" loading="lazy">
                         </a>
                     </div>
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img src="/assets/medias/nhk-logo.webp" alt="Logo for NHK" width="80" height="30" loading="lazy">
                         </a>
                     </div>
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img class="bright invert" src="/assets/medias/asahi-logo.webp" alt="Logo for Asahi Shimbun" width="80" height="25" loading="lazy">
                         </a>
                     </div>
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img class="bright invert tvtokyo" src="/assets/medias/tv-tokyo.svg" alt="Logo for TV Tokyo" width="80" height="60" loading="lazy">
                         </a>
                     </div>
-                    <div class="mention hidden down">
+                    <div class="mention hidden down fast">
                         <a href="/about#media">
                             <img class="bright" src="/assets/medias/ishk.webp" alt="Logo for Ishinomaki Kahoku" width="80" height="60" loading="lazy">
                         </a>
@@ -145,14 +193,23 @@ layout: 'base.njk'
 
             <h2 class="section-title">Latest stories</h2>
 
+            <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into, useful resources, and more.</p>
+
             <span class="medium">via <img src="/assets/medium-black.png" alt="Logo for Medium" width="112" height="28" loading="lazy"></span>
-            
+
+
+            <ul role="list" class="articles__list flow">
+                {%- for post in collections.featured | reverse -%}
+                    {% include "article-snippet.njk" %}
+                {%- endfor %}
+            </ul>
+
 
             <div class="wrapper">
                 <a class="card" href="https://medium.com/inbound-japan/inbound-japan-2-may-19-roundup-40f4a789e0d3?source=rss-d8b99cc9e7b4------2" target="_blank">
                 <article>
                     <div class="img-container">
-                        <img src="/assets/blog/blog1.webp" alt="" class="thumbnail" loading="lazy">
+                        <img src="/assets/blog/blog1.webp" width="280" height="186.6" alt="Mockup of a Knowledge Base homepage" class="thumbnail" loading="lazy">
                     </div>
                     <div class="meta-container">
                         <h3 class="title">Inbound Japan #2 — May '19 Roundup</h3>
@@ -163,7 +220,7 @@ layout: 'base.njk'
                 <a class="card" href="https://medium.com/inbound-japan/inbound-japan-april-2019-roundup-56dd997260c5?source=rss-d8b99cc9e7b4------2" target="_blank">
                 <article>
                     <div class="img-container">
-                        <img src="/assets/blog/blog2.webp" alt="" class="thumbnail" loading="lazy">
+                        <img src="/assets/blog/blog2.webp" width="280" height="186.6" alt="Menu screen for a bike pass service" class="thumbnail" loading="lazy">
                     </div>
                     <div class="meta-container">
                         <h3 class="title">Inbound Japan — April 2019 Roundup</h3>
@@ -174,7 +231,7 @@ layout: 'base.njk'
                 <a class="card" href="https://medium.com/japan-travel/helping-kumamoto-with-inbound-tourism-b30834a12bb4?source=rss-d8b99cc9e7b4------2" target="_blank">
                 <article>
                     <div class="img-container">
-                        <img src="/assets/blog/blog3.webp" alt="" class="thumbnail" loading="lazy">
+                        <img src="/assets/blog/blog3.webp" width="280" height="186.6" alt="Poster for a tourism event" class="thumbnail" loading="lazy">
                     </div>
                     <div class="meta-container">
                         <h3 class="title">Helping Kumamoto with Inbound Tourism</h3>
@@ -185,37 +242,9 @@ layout: 'base.njk'
 
             </div>
 
+
+
+            <a href="./blog" class="btn btn--neutral">More nonsense</a>
+
     </div>
 </section>
-
-
-<!-- <section class="hero">
-  <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">Welcome to my blog!</h1>
-        <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into, useful resources, and more.</p>
-        <p>Below are some of my favourite articles, or you can go to the blog page to see my most recent posts.</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-        </div>
-      </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
-  </div>
-</section> -->
-
-<section id="featured-articles" class="featured-articles">
-  <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
-    
-    <ul role="list" class="articles__list flow">
-    {%- for post in collections.featured | reverse -%}
-        {% include "article-snippet.njk" %}
-    {%- endfor %}
-    </ul>
-
-  </div>
-</section> 

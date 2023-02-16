@@ -293,7 +293,7 @@
             padding: 6rem 0;
         }
         .atf {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: 1fr;
             grid-gap: .2em;
         };
         .person {
@@ -363,7 +363,7 @@
 
     .media {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-gap: 4rem 0;
     }
     
@@ -372,7 +372,7 @@
     }
 
     .header-content .right-header .media {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 

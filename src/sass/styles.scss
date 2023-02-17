@@ -1000,10 +1000,10 @@ mark {
   // margin-bottom: 1.4em;
 }
 
-.blog a:hover img {
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 30%);
-  transition: all .2s ease-in-out;
-}
+// .blog a:hover img {
+//   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 30%);
+//   transition: all .2s ease-in-out;
+// }
 .blog .img-container {
   position: relative;
 }
@@ -1020,6 +1020,12 @@ mark {
   color: #5d5d5d;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.blog a:hover img {
+  // box-shadow: 0 10px 20px -10px rgb(0 0 0 / 30%);
+  transition: all 1s ease-in-out;
+  transform: scale(1.05);
 }
 
 // HP CTA / CONTACT ME

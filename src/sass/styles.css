@@ -1116,13 +1116,6 @@ ruby.name rt {
           justify-content: space-evenly;
 }
 
-.blog a:hover img {
-  -webkit-box-shadow: 0 10px 20px -10px black;
-          box-shadow: 0 10px 20px -10px black;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
 .blog .img-container {
   position: relative;
 }
@@ -1140,6 +1133,13 @@ ruby.name rt {
   color: #5d5d5d;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.blog a:hover img {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 h2.section-title {

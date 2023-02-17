@@ -1834,12 +1834,26 @@ img.blob3 {
 // CHANGELOG
 
 
+h2.page-title {
+  font-family: "Unica One";
+  text-transform: uppercase;
+}
 
+span.title-label {
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--clr-gold);
+  padding-bottom: 7px;
+  display: inline-block;
+  margin-bottom: 3px;
+}
 
 
 .grid p {
   padding: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   max-width: 700px;
 }
 .grid li {

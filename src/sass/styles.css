@@ -145,6 +145,7 @@ section .container {
   letter-spacing: 25px;
   text-indent: 25px;
   z-index: 2;
+  font-family: "Unica One";
 }
 
 .main-title h2 span {
@@ -275,6 +276,8 @@ html {
   outline: 3px dotted var(--color-secondary);
   outline-offset: 2px;
   border-radius: 5px;
+  z-index: 10;
+  position: relative;
 }
 
 body {
@@ -315,11 +318,13 @@ a {
 }
 
 .main-nav.is-open {
-  opacity: .91;
+  opacity: 1;
   z-index: 100;
   visibility: visible;
   position: fixed;
   background: rgba(255, 255, 255, 0.66);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 /* Yellow band effect */
@@ -330,15 +335,13 @@ a {
   bottom: 0;
   left: 0;
   right: -15px;
-  background: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.2);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transform: skew(-14deg) translateX(-120%);
           transform: skew(-14deg) translateX(-120%);
   -webkit-transition: all .275s .1s;
   transition: all .275s .1s;
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
 }
 
 .main-nav.is-open::before {
@@ -1113,12 +1116,6 @@ ruby.name rt {
           justify-content: space-evenly;
 }
 
-.blog a {
-  min-width: 0;
-  width: 280px;
-  margin-bottom: 1.4em;
-}
-
 .blog a:hover img {
   -webkit-box-shadow: 0 10px 20px -10px black;
           box-shadow: 0 10px 20px -10px black;
@@ -1233,8 +1230,8 @@ p.cta {
   padding: 0.45em 1.4em;
   background: white;
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);
 }
 
 .skills ul li:hover {
@@ -1251,6 +1248,7 @@ footer {
   font-weight: 300;
   -webkit-box-shadow: 0 0 30px -14px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 30px -14px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 footer .container {
@@ -1306,6 +1304,18 @@ footer .container .fgrid .sns ul.list {
   display: -ms-flexbox;
   display: flex;
   grid-gap: 2rem;
+}
+
+footer.footer:before {
+  content: '';
+  height: 0.3rem;
+  width: 100%;
+  display: block;
+  background: var(--mail-line);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 footer div.logo {

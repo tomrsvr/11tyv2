@@ -91,6 +91,7 @@ section {
     letter-spacing: 25px;
     text-indent: 25px;
     z-index: 2;
+    font-family: "Unica One";
     span {
       color: var(--color-secondary);
     }
@@ -220,6 +221,8 @@ html {
   outline: 3px dotted var(--color-secondary);
   outline-offset: 2px;
   border-radius: 5px;
+  z-index: 10;
+  position: relative;
 }
 
 body {
@@ -992,10 +995,11 @@ mark {
   justify-content: space-evenly;
 }
 .blog a {
-  min-width: 0;
+  // min-width: 0;
   // width: 280px;
-  margin-bottom: 1.4em;
+  // margin-bottom: 1.4em;
 }
+
 .blog a:hover img {
   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 30%);
   transition: all .2s ease-in-out;
@@ -1127,7 +1131,7 @@ section {
     padding: 0.45em 1.4em;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 5px 20px -18px rgba(0,0,0,.4);
+    box-shadow: 0 5px 20px -18px rgba(0,0,0,.7);
     &:hover {
         outline: 1px solid #c1c1c1;
     }

@@ -1,7 +1,8 @@
 <li>
     <a href="{{ post.url }}" class="">
       <article class="snippet2">
-        <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
+        <div class="gradient {{ post.data.cardColor }}"></div>
+        <img src="{{ post.data.cardImage }}" alt="{{ post.data.cardImageAlt }}" class="snippet__image">
         <h3 class="snippet__title">{{ post.data.title }}</h3>
         {# <p class="snippet__meta">by <span> {{ post.data.author }}</span> on {{ post.data.date | postDate }} </p> #}
         <p class="snippet__meta"> {{ post.data.date | postDate }} </p>
@@ -15,16 +16,53 @@
 
 ul.articles__list.flow {
     display: grid;
-    gap: 1rem;
+    gap: 0;
     grid-template-columns: 1fr 1fr;
+    align-items: baseline;
 }
 
 .articles__list li {
-    border: 1px solid lightgrey;
+    border: 0 solid lightgrey;
     
 }
 article.snippet2 {
     padding: 2rem;
+    background: beige;
+    position: relative;
+    overflow: hidden;
+    min-height: 20rem;
+}
+
+.flow a {
+    display: block;
+}
+
+img.snippet__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: .4;
+}
+
+.snippet__title, .snippet__body, .snippet__meta {
+  z-index: 1;
+    position: relative;
+}
+
+.gradient {
+    background: red;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.gradient.blue {
+  background: var(--mail-line);
 }
 
 

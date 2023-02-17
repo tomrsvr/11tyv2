@@ -128,7 +128,7 @@ section .container {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
-  padding: 6rem 0;
+  padding: 8rem 0;
   width: 100%;
 }
 
@@ -159,6 +159,8 @@ h2.section-title {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 2rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .gt {
@@ -1210,6 +1212,54 @@ p.cta {
   background-color: var(--clr-white);
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.95))), url(/assets/washi.webp);
   background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.95) 100%), url(/assets/washi.webp);
+  overflow: hidden;
+}
+
+.skills .list {
+  position: relative;
+}
+
+.skills .list svg {
+  position: absolute;
+  left: -25%;
+  top: -165%;
+  opacity: 1;
+  -webkit-transition: -webkit-animation 6.5s ease;
+  transition: -webkit-animation 6.5s ease;
+  transition: animation 6.5s ease;
+  transition: animation 6.5s ease, -webkit-animation 6.5s ease;
+  animation: blob 20s 1s infinite;
+  -webkit-animation: blob 20s 1s infinite;
+}
+
+@-webkit-keyframes blob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform: scaleX(1.5);
+            transform: scaleX(1.5);
+  }
+}
+
+@keyframes blob {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    -webkit-transform: scaleX(1.5);
+            transform: scaleX(1.5);
+  }
 }
 
 .skills ul {
@@ -1223,6 +1273,8 @@ p.cta {
           justify-content: center;
   margin: 3rem auto;
   max-width: 750px;
+  position: relative;
+  z-index: 1;
 }
 
 .skills ul li {

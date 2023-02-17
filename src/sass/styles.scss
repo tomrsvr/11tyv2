@@ -75,7 +75,7 @@ section {
       max-width: 900px;
       margin: 0 auto;
       position: relative;
-      padding: 6rem 0;
+      padding: 8rem 0;
       width: 100%;
   }
 }
@@ -106,6 +106,8 @@ h2.section-title {
   text-align: center;
   text-transform: uppercase;
   margin: 0 0 2rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -994,11 +996,11 @@ mark {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.blog a {
-  // min-width: 0;
-  // width: 280px;
-  // margin-bottom: 1.4em;
-}
+// .blog a {
+//   // min-width: 0;
+//   // width: 280px;
+//   // margin-bottom: 1.4em;
+// }
 
 // .blog a:hover img {
 //   box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 30%);
@@ -1124,6 +1126,32 @@ section {
   background-image: 
     linear-gradient(0deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.95) 100%), 
     url(/assets/washi.webp);
+  overflow: hidden;
+    .list {
+      position: relative;
+      svg {
+        position: absolute;
+        left: -25%;
+        top: -165%;
+        // transform: translate(12%,-55%);
+        opacity: 1;
+        transition: animation 6.5s ease;
+        animation: blob 20s 1s infinite;
+        -webkit-animation: blob 20s 1s infinite;
+      }
+    } 
+}
+
+@keyframes blob {
+  0% {
+    transform: rotate(0);
+    transform: scaleX(1);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+    transform: scaleX(1.5);
+  }
 }
 
 .skills ul {
@@ -1132,6 +1160,8 @@ section {
   justify-content: center;
   margin: 3rem auto;
   max-width: 750px;
+  position: relative;
+  z-index: 1;
   li {
     margin: 0.25em;
     padding: 0.45em 1.4em;

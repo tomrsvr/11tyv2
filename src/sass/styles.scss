@@ -1142,6 +1142,14 @@ section {
     } 
 }
 
+@media screen and (max-width: 600px) {
+  .skills .list svg {
+    top: 0;
+  }
+
+}
+
+
 @keyframes blob {
   0% {
     transform: rotate(0);

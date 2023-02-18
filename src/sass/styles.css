@@ -1232,6 +1232,12 @@ p.cta {
   -webkit-animation: blob 20s 1s infinite;
 }
 
+@media screen and (max-width: 600px) {
+  .skills .list svg {
+    top: 0;
+  }
+}
+
 @-webkit-keyframes blob {
   0% {
     -webkit-transform: rotate(0);

@@ -1224,12 +1224,8 @@ p.cta {
   left: -25%;
   top: -165%;
   opacity: 1;
-  -webkit-transition: -webkit-animation 6.5s ease;
-  transition: -webkit-animation 6.5s ease;
-  transition: animation 6.5s ease;
-  transition: animation 6.5s ease, -webkit-animation 6.5s ease;
-  animation: blob 20s 1s infinite;
-  -webkit-animation: blob 20s 1s infinite;
+  animation: blob 30s 1s infinite;
+  -webkit-animation: blob 30s 1s infinite;
 }
 
 @media screen and (max-width: 600px) {
@@ -1240,31 +1236,23 @@ p.cta {
 
 @-webkit-keyframes blob {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: rotate(0) scaleX(0.8);
+            transform: rotate(0) scaleX(0.8);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-transform: scaleX(1.5);
-            transform: scaleX(1.5);
+    -webkit-transform: rotate(360deg) scaleX(1.8);
+            transform: rotate(360deg) scaleX(1.8);
   }
 }
 
 @keyframes blob {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: rotate(0) scaleX(0.8);
+            transform: rotate(0) scaleX(0.8);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    -webkit-transform: scaleX(1.5);
-            transform: scaleX(1.5);
+    -webkit-transform: rotate(360deg) scaleX(1.8);
+            transform: rotate(360deg) scaleX(1.8);
   }
 }
 
@@ -1409,6 +1397,61 @@ footer .sns {
 }
 
 /* HP Blogs */
+ul.articles__list.flow {
+  display: -ms-grid;
+  display: grid;
+  gap: 0;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.articles__list li {
+  border: 0 solid lightgrey;
+}
+
+article.snippet2 {
+  padding: 2rem;
+  background: beige;
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
+}
+
+.flow a {
+  display: block;
+}
+
+img.snippet__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .4;
+}
+
+.snippet__title, .snippet__body, .snippet__meta {
+  z-index: 1;
+  position: relative;
+}
+
+.gradient {
+  background: red;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  opacity: .8;
+}
+
+.gradient.blue {
+  background: var(--mail-line);
+}
+
 span.medium {
   text-align: center;
   display: block;
@@ -2482,6 +2525,10 @@ details li {
   }
   .contact-me .typewriter .typewrite {
     width: 100%;
+  }
+  ul.articles__list.flow {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   .blog #rtb h2 {
     font-size: 1rem;

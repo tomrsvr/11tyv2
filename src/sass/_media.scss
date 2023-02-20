@@ -401,6 +401,11 @@
 
     // HP BLOG ____________________________________________________________
 
+
+    ul.articles__list.flow {
+        grid-template-columns: 1fr;
+    }
+
     .blog #rtb {
         h2 {
         font-size: 1rem;

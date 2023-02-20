@@ -46,7 +46,7 @@
 }
 
 /* Remove default margin */
-body,
+/* body,
 h1,
 h2,
 h3,
@@ -57,7 +57,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
+} */
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul:where([role="list"]),
@@ -152,9 +152,9 @@ strong {
    and add margin to the top for proper
    spacing */
 
-.flow > *:where(:not(:first-child)) {
-  /* margin-top: var(--flow-spacer, 1em); */
-}
+/* .flow > *:where(:not(:first-child)) {
+  /* margin-top: var(--flow-spacer, 1em); 
+} */
 
 .container {
   margin-inline: auto;

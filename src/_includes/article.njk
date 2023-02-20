@@ -1,23 +1,70 @@
 ---
 layout: 'base.njk'
+pageId: blog-post
 ---
 
-<article class="main-article">
-<div class="container container--narrow flow">
-  
-    <h1 class="article-title">
-      {{ title }}
-    </h1>
-    <figure class="main-article__figure">
-      <img src="{{ image }}" alt="{{ imageAlt }}">
-      <figcaption>
-        {{ imageAlt }}
-      </figcaption>
-    </figure>
+<style>
+.page-content {
+    display: flex;
+    margin-inline: auto;
+    padding-inline: 1.5em;
+    max-width: 72rem;
+    justify-content: space-evenly;
+    margin-top:4rem;
+}
+.sidebar {
+  max-width: 300px;
+  min-width: 20rem;
+  background: #e3e3e3;
+}
 
-    {{ content | safe }}
-    
-  
+#blog-post article p {
+    line-height: 32px;
+    margin-top: 1rem;
+}
+
+#blog-post article li {
+    list-style-type: disc;
+    margin: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+#blog-post article h3 {
+    margin: 1rem 0;
+}
+
+hr {
+    margin: 3rem 0;
+    color: var(--clr-grey);
+}
+</style>
+
+{% include "hero.njk" %}
+
+<div class="page-content">
+  <div class="blog-post">
+    <article class="main-article">
+    <div class="container container--narrow flow">
+      
+        <h1 class="article-title">
+          {{ title }}
+        </h1>
+        
+        <figure class="main-article__figure">
+          <img src="{{ image }}" alt="{{ imageAlt }}">
+          <figcaption>
+            {{ imageAlt }}
+          </figcaption>
+        </figure>
+
+        {{ content | safe }}
+        
+      
+    </div>
+    </article>
+  </div>
+  <div class="sidebar">
+    <h3>side bar</h3>
+    <p>lorem ipsum</p>
+  </div>
 </div>
-</article>
- 

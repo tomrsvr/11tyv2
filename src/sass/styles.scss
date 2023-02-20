@@ -1135,9 +1135,9 @@ section {
         top: -165%;
         // transform: translate(12%,-55%);
         opacity: 1;
-        transition: animation 6.5s ease;
-        animation: blob 20s 1s infinite;
-        -webkit-animation: blob 20s 1s infinite;
+        // transition: animation 20s ease;
+        animation: blob 30s 1s infinite;
+        -webkit-animation: blob 30s 1s infinite;
       }
     } 
 }
@@ -1152,13 +1152,11 @@ section {
 
 @keyframes blob {
   0% {
-    transform: rotate(0);
-    transform: scaleX(1);
+    transform: rotate(0) scaleX(.8);
   }
   
   100% {
-    transform: rotate(360deg);
-    transform: scaleX(1.5);
+    transform: rotate(360deg) scaleX(1.8);
   }
 }
 
@@ -1280,6 +1278,58 @@ footer {
 
 
 /* HP Blogs */
+
+
+ul.articles__list.flow {
+  display: grid;
+  gap: 0;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+}
+
+.articles__list li {
+  border: 0 solid lightgrey;
+  
+}
+article.snippet2 {
+  padding: 2rem;
+  background: beige;
+  position: relative;
+  overflow: hidden;
+  min-height: 20rem;
+}
+
+.flow a {
+  display: block;
+}
+
+img.snippet__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: .4;
+}
+
+.snippet__title, .snippet__body, .snippet__meta {
+  z-index: 1;
+  position: relative;
+}
+
+.gradient {
+  background: red;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  opacity: .8;
+}
+
+.gradient.blue {
+  background: var(--mail-line);
+}
 
 span.medium {
   text-align: center;

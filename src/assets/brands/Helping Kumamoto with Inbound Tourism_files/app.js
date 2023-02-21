@@ -57,11 +57,11 @@ window.onload = function() {
 
 
 //Toggle theme — disabled while feature hidden
- const themeBtn = document.querySelector('.theme-btn');
- themeBtn.addEventListener('click',() =>{
-     let element = document.body;
-     element.classList.toggle('dark-mode');
- })
+// const themeBtn = document.querySelector('.theme-btn');
+// themeBtn.addEventListener('click',() =>{
+//     let element = document.body;
+//     element.classList.toggle('dark-mode');
+// })
 
 //Native animate on scroll (Fireship: https://www.youtube.com/watch?v=T33NN_pPeNI)
 const observer = new IntersectionObserver((entries) => {

@@ -12,10 +12,10 @@ layout: 'base.njk'
             <div class="container">
                 <div class="atf">
                     <div class="person anix ani1">
-                        <div class="person__container">
+                        {# <div class="person__container">
                             <img src="assets/tom-ai.webp" alt="Friendly AI-generated likeness of Tom Roseveare" class="person__img" width="192" height="188" draggable="false">
                             <div class="person__circle" class="avatar xs bg"></div>
-                        </div>
+                        </div> #}
                     </div>
 
                     <div class="content postcard" id="postcard">
@@ -35,7 +35,12 @@ layout: 'base.njk'
                                 }
 
                                 .stamp2.person {
-                                    max-width: 10rem;
+                                    max-width: 8rem;
+                                    margin: auto 0 0 auto;
+                                }
+
+                                .stamp2 .person__circle {
+                                    height: 100%;
                                 }
 
                                 .postcard:before {
@@ -65,7 +70,7 @@ layout: 'base.njk'
 
                             <div class="stamp2 person anix ani1">
                                 <div class="person__container">
-                                    <img src="assets/tom-ai.webp" alt="Friendly AI-generated likeness of Tom Roseveare" class="person__img" width="192" height="188" draggable="false">
+                                    <img src="assets/tom-ai2.png" alt="Friendly AI-generated likeness of Tom Roseveare" class="person__img" width="192" height="188" draggable="false">
                                     <div class="person__circle" class="avatar xs bg"></div>
                                 </div>
                             </div>
@@ -80,7 +85,7 @@ layout: 'base.njk'
                                 <div class="line"></div>
                             </div>
 
-                            <h1 class="anix ani3">I'm <ruby class="name"><rb>Tom</rb><rt lang="ja">トム</rt></ruby> <ruby class="name"><rb> Roseveare</rb><rt lang="ja">ローズヴィア</rt></ruby>,</h1>
+                            <h1 class="anix ani3"><span>I'm</span> <ruby class="name"><rb>Tom</rb><rt lang="ja">トム</rt></ruby> <ruby class="name"><rb> Roseveare</rb><rt lang="ja">ローズヴィア</rt></ruby>,</h1>
                             <p class="intro anix ani4">a British creative leader based in Tokyo, inspiring teams to craft memorable and easy-to-use digital experiences.</h2>
                             
                         </div>
@@ -92,7 +97,7 @@ layout: 'base.njk'
                     
                     
          
-                </div><!--------   mob-ATF  --------------->
+                </div>
 
 
                 <div class="hero-cta">
@@ -155,8 +160,6 @@ layout: 'base.njk'
                     </div>
                 </div>
 
-            <!-- </div> -->
-
             <p class="cta">Find out more <a href="/about" class="underline--magical">about me</a></p>
 
     </div>  
@@ -167,7 +170,7 @@ layout: 'base.njk'
 <section class="cta color lazy" id="bgimage">  
   <div class="container"> 
 
-          <h2 class="section-title">Let's talk</h2>
+          <h2 class="section-title raw">Let's talk</h2>
 
           <h3 class="gt hidden left">Passionate about working on the web and exploring 
               <div class="typewriter">
@@ -193,15 +196,27 @@ layout: 'base.njk'
 
             <h2 class="section-title">Latest stories</h2>
 
-            <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into, useful resources, and more.</p>
-
             <ul role="list" class="articles__list flow">
                 {%- for post in collections.featured | reverse -%}
                     {% include "article-snippet.njk" %}
                 {%- endfor %}
+
+                <li class="cta">
+                    <a href="/blog" class="cta">
+                        <article class="snippet2">
+                            <div class="blue"></div>
+                            {# <img src="/assets/blog/flat-coffee.jpg" alt="" class="snippet__image"> #}
+                            <h3 class="snippet__title">Read more</h3>
+                            {# <p class="snippet__meta">by <span> {{ post.data.author }}</span> on {{ post.data.date | postDate }} </p> #}
+                            {# <p class="snippet__meta"> No date </p> #}
+                            <p class="snippet__body">Random musings etc </p>
+                        </article>
+                    </a>
+                </li>
             </ul>
-
-            <a href="./blog" class="btn btn--neutral">More nonsense</a>
-
+            
+            <div class="cta">
+                <a href="./blog" class="cta-link">More stories</a>
+            </div>
     </div>
 </section>          

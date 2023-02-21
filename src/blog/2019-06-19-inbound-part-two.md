@@ -1,14 +1,16 @@
 ---
 title: Inbound Japan 2— May 2019 Roundup
+titleJa: IJ2JA
 author: Tom Roseveare
 date: 2019-06-19
 tags: ["post", "featured"]
+coverImage: /assets/blog/blog1.webp
 cardImage: /assets/blog/help.jpg
 cardImageAlt: Test
 cardColor: blue
 image: /assets/blog/blog1.webp
 imageAlt: This is a test
-description: We joined forces with Hilton to sell a special, exclusive stay plan in celebration of their 100th anniversary on 31st May
+description: We joined forces with Hilton to sell a special, exclusive
 ---
 
 
@@ -23,6 +25,8 @@ We joined forces with Hilton to sell a special, exclusive stay plan in celebrati
 ---
 
 ## Knowledge Base
+
+![Wearing a hat](/assets/blog/help.webp)
 
 We’re unveiling an upgrade of our support pages, for all site users to take advantage of. We call it the Knowledge Center.
 
@@ -60,18 +64,3 @@ Golden Week is something of a boon for the domestic travel industry thanks to a 
 2. [More on Hilton Hotel 100 anniversary](https://www.forbes.com/sites/michaelgoldstein/2019/02/01/hilton-hotels-celebrates-100th-birthday/?sh=bf8776757148)
 3. [Japan’s Narita airport rolls out security robots in run-up to 2020 Olympics](https://www.straitstimes.com/asia/east-asia/japans-narita-airport-to-use-security-robots-in-run-up-to-2020-olympics)
 4. [Japan begins testing its 248 mph next-gen bullet train](https://www.theverge.com/2019/5/13/18617515/alfa-x-bullet-train-japan-testing-400-kmh-248-mph-fastest-long-nose-72-feet)
-
-## May Highlights from Japan Travel
-
-A selection of content from across Tokyo, Kyoto and Kanagawa. A new port guide format debuts with Osanbashi port area information, while we got to see TeamLab’s latest slice of digital art at the traditional Meijiza theatre in Tokyo.
-
-https://en.japantravel.com/kanagawa/yokohama-osanbashi-port-guide/58829
-
-https://en.japantravel.com/tokyo/meijiza-theatre/59191
-
-https://en.japantravel.com/kyoto/hotel-canata-kyoto/59073
-
-https://en.japantravel.com/tokyo/the-royal-park-canvas-ginza-8/57936
-
-
-

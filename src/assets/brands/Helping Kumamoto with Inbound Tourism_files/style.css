@@ -298,6 +298,7 @@ strong {
 .snippet__image {
   grid-area: image;
   width: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 .snippet__title {

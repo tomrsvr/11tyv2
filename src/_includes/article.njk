@@ -1,43 +1,11 @@
 ---
 layout: 'base.njk'
 pageId: blog-post
+eleventyComputed:
+    headline: "{{ title }}"
+    headlineJa: "{{ titleJa }}"
 ---
 
-<style>
-.page-content {
-    display: flex;
-    margin-inline: auto;
-    padding-inline: 1.5em;
-    max-width: 72rem;
-    justify-content: space-evenly;
-    margin-top:4rem;
-}
-.sidebar {
-  max-width: 300px;
-  min-width: 20rem;
-  background: #e3e3e3;
-}
-
-#blog-post article p {
-    line-height: 32px;
-    margin-top: 1rem;
-}
-
-#blog-post article li {
-    list-style-type: disc;
-    margin: 1rem 2rem;
-    margin-top: 1rem;
-}
-
-#blog-post article h3 {
-    margin: 1rem 0;
-}
-
-hr {
-    margin: 3rem 0;
-    color: var(--clr-grey);
-}
-</style>
 
 {% include "hero.njk" %}
 
@@ -59,12 +27,13 @@ hr {
 
         {{ content | safe }}
         
-      
+        <p>Blog > {{ title }}</p>
     </div>
     </article>
   </div>
   <div class="sidebar">
-    <h3>side bar</h3>
+    <h3>Share</h3>
     <p>lorem ipsum</p>
+
   </div>
 </div>

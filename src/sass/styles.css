@@ -107,6 +107,19 @@ main {
   outline-offset: 1rem;
 }
 
+.theme-toggle.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.theme-toggle .noSelect:focus {
+  outline: none !important;
+}
+
 .hidden {
   opacity: 0;
   -webkit-transition: all 1s ease-in-out;

@@ -223,6 +223,7 @@ h2.section-title {
   margin: 0 0 2rem 0;
   position: relative;
   z-index: 2;
+  color: var(--clr-off-black);
 }
 
 h2.section-title::after {
@@ -267,12 +268,15 @@ h2.section-title.raw::after {
   --clr-grey1: #eee;
   --clr-gold: #af966b;
   --clr-white: #fff;
+  --clr-black-text: #121212;
   --clr-off-black: #121212;
   --clr-off-black-always: #121212;
   --clr-hero-border: #0e0e0e;
   --theme-grad-swap: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-grad: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-gs: grayscale(1);
+  --washi: linear-gradient(0deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.95) 100%), 
+  url(/assets/washi.webp);
 }
 
 .dark-mode {
@@ -282,12 +286,14 @@ h2.section-title.raw::after {
   --clr-grey1: #414141;
   --clr-gold: #af966b;
   --clr-white: #0e0e0e;
-  --clr-off-black: #121212;
+  --clr-black-text: #eee;
+  --clr-off-black: #eee;
   --clr-off-black-always: #121212;
   --clr-hero-border: #231c1c;
   --theme-gs: grayscale(1) brightness(0.6);
   --theme-grad: linear-gradient(64deg, #375e7c 0%, #521b30 100%);
   --theme-grad-swap: linear-gradient(64deg, #ff5c9a 0%, #75c3ff 100%);
+  --washi: linear-gradient(0deg, rgb(0 0 0 / 80%) 0%, rgb(39 39 39 / 95%) 100%), url(/assets/washi.webp);
 }
 
 :root {
@@ -1421,13 +1427,16 @@ p.cta {
 
 .skills {
   background-color: var(--clr-white);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.95))), url(/assets/washi.webp);
-  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.95) 100%), url(/assets/washi.webp);
+  background-image: var(--washi);
   overflow: hidden;
 }
 
 .skills .list {
   position: relative;
+}
+
+.skills .list ul {
+  color: var(--clr-off-black);
 }
 
 .skills .list svg.sone {
@@ -1449,6 +1458,10 @@ p.cta {
   animation: blob2 100s 1s infinite;
   -webkit-animation: blob2 100s 1s infinite;
   max-width: 41rem;
+}
+
+.dark-mode .skills svg {
+  opacity: 0 !important;
 }
 
 @media screen and (max-width: 600px) {
@@ -1536,6 +1549,7 @@ p.cta {
   margin: 0.25em;
   padding: 0.45em 1.4em;
   background: var(--clr-white);
+  color: var(--clr-black-text);
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);
           box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);

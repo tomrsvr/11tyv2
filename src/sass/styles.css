@@ -94,8 +94,17 @@ main {
   pointer-events: none;
 }
 
-.theme-btn.new {
-  left: 3%;
+.theme-toggle svg g {
+  fill: yellow;
+}
+
+.theme-toggle.theme-toggle--toggled svg g {
+  fill: white;
+}
+
+.theme-toggle:focus-visible {
+  border-radius: 50%;
+  outline-offset: 1rem;
 }
 
 .hidden {
@@ -245,8 +254,8 @@ h2.section-title.raw::after {
   --clr-grey1: #eee;
   --clr-gold: #af966b;
   --clr-white: #fff;
-  --clr-off-black: #0e0e0e;
-  --clr-off-black-always: #0e0e0e;
+  --clr-off-black: #121212;
+  --clr-off-black-always: #121212;
   --clr-hero-border: #0e0e0e;
   --theme-grad-swap: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-grad: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
@@ -260,8 +269,8 @@ h2.section-title.raw::after {
   --clr-grey1: #414141;
   --clr-gold: #af966b;
   --clr-white: #0e0e0e;
-  --clr-off-black: #dddddd;
-  --clr-off-black-always: #0e0e0e;
+  --clr-off-black: #121212;
+  --clr-off-black-always: #121212;
   --clr-hero-border: #231c1c;
   --theme-gs: grayscale(1) brightness(0.6);
   --theme-grad: linear-gradient(64deg, #375e7c 0%, #521b30 100%);
@@ -347,7 +356,7 @@ html {
   scroll-behavior: smooth;
 }
 
-:focus {
+:focus-visible {
   outline: 3px dotted var(--color-secondary);
   outline-offset: 2px;
   border-radius: 5px;

@@ -59,11 +59,11 @@ window.onload = function() {
 
 
 //Toggle theme — disabled while feature hidden
- const themeBtn = document.querySelector('.theme-btn');
- themeBtn.addEventListener('click',() =>{
-     let element = document.body;
-     element.classList.toggle('dark-mode');
- })
+//  const themeBtn = document.querySelector('.theme-btn');
+//  themeBtn.addEventListener('click',() =>{
+//      let element = document.body;
+//      element.classList.toggle('dark-mode');
+//  })
 
 
 //Toggle theme 2

@@ -177,6 +177,38 @@ document.addEventListener("DOMContentLoaded", function() {
   })
 
 
+
+  // moving text
+
+  const first = document.getElementById("first")
+  const second = document.getElementById("second")
+  const container = document.getElementById("container")
+  const rect = container.getBoundingClientRect()
+  
+  const animate = (element,position) => {
+       element.style.transform = `translateX(${position}px)`
+  } 
+  
+         
+  
+  document.addEventListener('scroll', function(e) {
+    lastKnownScrollPosition = window.scrollY;
+      
+     window.requestAnimationFrame(function() {
+       
+        animate(first,lastKnownScrollPosition*.2)
+        animate(second,lastKnownScrollPosition*-.2)
+        
+      });
+  });
+
+
+
+
+
+
+
+
   // Wrap every letter in a span
 var textWrapper = document.querySelector('.anim');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -226,4 +258,6 @@ anime.timeline({loop: false})
       transformElement(postCard, position);
     });
   };
+  
+
   

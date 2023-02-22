@@ -107,7 +107,7 @@ main {
   outline-offset: 1rem;
 }
 
-.theme-toggle.noSelect {
+.theme-toggle.noselect {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -119,7 +119,7 @@ main {
   height: 100%;
 }
 
-.theme-toggle .noSelect:focus {
+.theme-toggle .noselect:focus {
   outline: none !important;
 }
 
@@ -287,7 +287,7 @@ h2.section-title.raw {
   --theme-grad-swap: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-grad: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-gs: grayscale(1);
-  --washi: linear-gradient(0deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.95) 100%), 
+  --washi: linear-gradient(0deg, rgba(210,210,210,.8) 0%, rgba(255,255,255,.95) 100%), 
   url(/assets/washi.webp);
 }
 
@@ -1563,9 +1563,26 @@ p.cta {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 3rem auto;
-  max-width: 750px;
+  max-width: 60rem;
   position: relative;
   z-index: 1;
+  font-size: 1.8rem;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+}
+
+.skills ul span {
+  display: -webkit-box;
+}
+
+.skills ul span.row1 {
+  -webkit-animation: right 15s ease-in-out 1s infinite alternate none;
+          animation: right 15s ease-in-out 1s infinite alternate none;
+}
+
+.skills ul span.row2 {
+  -webkit-animation: left 15s ease-in-out 1s infinite alternate none;
+          animation: left 15s ease-in-out 1s infinite alternate none;
 }
 
 .skills ul li {
@@ -1576,10 +1593,82 @@ p.cta {
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);
           box-shadow: 0 5px 20px -18px rgba(0, 0, 0, 0.7);
+  -webkit-animation: swing 5s ease-in-out 1s infinite alternate none;
+          animation: swing 5s ease-in-out 1s infinite alternate none;
 }
 
 .skills ul li:hover {
   outline: 1px solid var(--clr-grey1);
+}
+
+section.skills .container {
+  max-width: inherit;
+}
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  100% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
+  100% {
+    -webkit-transform: translate(2%);
+            transform: translate(2%);
+  }
+}
+
+@keyframes right {
+  0% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
+  100% {
+    -webkit-transform: translate(2%);
+            transform: translate(2%);
+  }
+}
+
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: translate(2%);
+            transform: translate(2%);
+  }
+  100% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
+}
+
+@keyframes left {
+  0% {
+    -webkit-transform: translate(2%);
+            transform: translate(2%);
+  }
+  100% {
+    -webkit-transform: translate(-2%);
+            transform: translate(-2%);
+  }
 }
 
 footer {
@@ -1860,6 +1949,7 @@ section.hero .container {
   border-radius: 1rem;
   -webkit-box-shadow: 1rem 1rem 0 0 var(--clr-hero-border);
           box-shadow: 1rem 1rem 0 0 var(--clr-hero-border);
+  z-index: 2;
 }
 
 section.hero .container h2 {
@@ -2140,7 +2230,7 @@ h3.subtitle {
 }
 
 .timeline .timeline-item h5 {
-  padding: .2rem 0;
+  padding: 0;
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
@@ -2156,9 +2246,9 @@ h3.subtitle {
 .timeline .timeline-item span.url {
   font-weight: 200;
   font-style: italic;
-  font-size: .8rem;
+  font-size: .7rem;
   letter-spacing: 1px;
-  padding-left: 5px;
+  display: block;
 }
 
 .timeline .timeline-item span.role {
@@ -2508,14 +2598,21 @@ details li {
   margin: .4rem 0 1.2rem 3rem;
 }
 
-span.scroll-text {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #ffffff87;
-  font-size: 12rem;
-  color: transparent;
+#about #container span {
+  font-size: 13em;
+  font-weight: 900;
   text-transform: uppercase;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  opacity: .4;
+  color: transparent;
   position: absolute;
+  pointer-events: none;
   width: 300%;
+}
+
+#about #container span#second {
+  top: 10%;
 }
 
 @media screen and (max-width: 700px) {

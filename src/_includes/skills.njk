@@ -6,12 +6,20 @@
 
             <div class="list">
             <ul>
-                <li>Web accessibility</li>
-                <li>SEO</li>
-                <li>Conversion rate optimisation</li>
-                <li>Responsive design</li>
-                <li>Brand strategy</li>
-                <li>Typography</li>
+                <span class="row1">
+                    <li>Web accessibility</li>
+                    <li>SEO</li>
+                    <li>Conversion rate optimisation</li>
+                </span>
+
+                <style>.skills ul span { display: flex; } </style>
+
+                <span class="row2">
+                    <li>Responsive design</li>
+                    <li>Brand strategy</li>
+                    <li>Typography</li>
+                </span>
+
                 <li>Copywriting</li>
                 <li>Privacy</li>
                 <li>Internationalisation</li>
@@ -22,7 +30,27 @@
                 <li>UX & UI</li>
                 <li>Digital diplomacy</li>
                 <li>Agile methodology</li>
-                <li>User-centered design</li>
+                <li data-hover="ユーザー中心設計">User-centered design</li>
+
+                <style>
+                .skills li:hover {
+                    color:transparent;
+                    {# transition: all .4s ease-in-out; #}
+                }
+                .skills li:hover:after {
+                    content: attr(data-hover);
+                    display: block;
+                    transition: all .4s ease-in-out;
+                    color: #000;
+                    position: absolute;
+                    top: 0;
+                    padding: 15px;
+                }    
+                    
+                </style>
+
+
+
             </ul>
             <svg class="sone" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <defs>

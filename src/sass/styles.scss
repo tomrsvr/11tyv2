@@ -84,7 +84,7 @@ main {
       border-radius: 50%;
       outline-offset: 1rem;
     }
-    &.noSelect {
+    &.noselect {
       -webkit-tap-highlight-color: transparent;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -96,7 +96,7 @@ main {
       width: 100%;
       height: 100%;
     }
-    .noSelect:focus {
+    .noselect:focus {
         outline: none !important;
     }
   }
@@ -230,7 +230,7 @@ h2.section-title {
   --theme-grad-swap: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-grad: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-gs: grayscale(1);
-  --washi: linear-gradient(0deg, rgba(255,255,255,.8) 0%, rgba(255,255,255,.95) 100%), 
+  --washi: linear-gradient(0deg, rgba(210,210,210,.8) 0%, rgba(255,255,255,.95) 100%), 
   url(/assets/washi.webp);
 }
 
@@ -1417,9 +1417,21 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   margin: 3rem auto;
-  max-width: 750px;
+  max-width: 60rem;
   position: relative;
   z-index: 1;
+  font-size: 1.8rem;
+  transform: rotate(-4deg);
+  // animation: swing 15s ease-in-out 1s infinite alternate none;
+  span {
+    display: -webkit-box;
+  }
+  span.row1 {
+    animation: right 15s ease-in-out 1s infinite alternate none;
+  }
+  span.row2 {
+    animation: left 15s ease-in-out 1s infinite alternate none;
+  }
   li {
     margin: 0.25em;
     padding: 0.45em 1.4em;
@@ -1427,11 +1439,30 @@ section {
     color: var(--clr-black-text);
     border-radius: 5px;
     box-shadow: 0 5px 20px -18px rgba(0,0,0,.7);
+    animation: swing 5s ease-in-out 1s infinite alternate none;
     &:hover {
         outline: 1px solid var(--clr-grey1);
     }
     }
   }
+
+  section.skills .container { max-width: inherit;}
+
+@keyframes swing {
+  0% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+@keyframes right {
+  0% { transform: translate(-2%); }
+  100% { transform: translate(2%); }
+}
+@keyframes left {
+  0% { transform: translate(2%); }
+  100% { transform: translate(-2%); }
+}
+
+
+
 
 // FOOTER
 
@@ -1701,6 +1732,7 @@ span.medium {
         max-width: 950px;
         border-radius: 1rem;
         box-shadow: 1rem 1rem 0 0 var(--clr-hero-border);
+        z-index: 2;
         h2 {
           color: var(--clr-off-black);
         }
@@ -1961,7 +1993,7 @@ h3.subtitle {
       text-align: left;
     }
     h5 {
-      padding: .2rem 0;
+      padding: 0;
       text-transform: uppercase;
       font-size: 1.3rem;
       font-weight: 600;
@@ -1975,9 +2007,9 @@ h3.subtitle {
       &.url {
         font-weight: 200;
         font-style: italic;
-        font-size: .8rem;
+        font-size: .7rem;
         letter-spacing: 1px;
-        padding-left: 5px;
+        display: block;
       }
       &.role {
         display: block;
@@ -2325,14 +2357,26 @@ margin: .4rem 0 1.2rem 3rem;
 // Experiments
 
 
-span.scroll-text {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #ffffff87;
-  font-size: 12rem;
-  color: transparent;
-  text-transform: uppercase;
-  position: absolute;
-  width: 300%;
+#about #container {
+  span {
+    font-size: 13em;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    opacity: .4;
+    color: transparent;
+    position: absolute;
+    pointer-events: none;
+    width: 300%;
+    &#first {
+
+    }
+    &#second {
+      top: 10%;
+    }
+  }
 }
+
 
 @import './media';

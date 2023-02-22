@@ -402,16 +402,16 @@
     // HP BLOG ____________________________________________________________
 
 
-    ul.articles__list.flow {
-        grid-template-columns: 1fr;
-    }
+    
 
-    .blog #rtb {
-        h2 {
-        font-size: 1rem;
+    .blog {
+        ul.articles__list.flow {
+            grid-template-columns: 1fr;
+            justify-content: center;
         }
-        .post-date {
-            font-size: .8rem;
+        
+        li.cta {
+            grid-column: 1;
         }
     }
 

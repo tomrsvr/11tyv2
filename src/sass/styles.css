@@ -59,7 +59,7 @@ main {
 }
 
 .theme-btn {
-  bottom: 5%;
+  bottom: 2%;
   right: 3%;
   width: 70px;
   height: 70px;
@@ -80,6 +80,7 @@ main {
           box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
+  z-index: 10;
 }
 
 .theme-btn:active {
@@ -105,8 +106,8 @@ main {
 }
 
 .hidden:where(.down) {
-  -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .show {
@@ -241,8 +242,11 @@ h2.section-title.raw::after {
   --clr-gold: #af966b;
   --clr-white: #fff;
   --clr-off-black: #0e0e0e;
+  --clr-off-black-always: #0e0e0e;
+  --clr-hero-border: #0e0e0e;
   --theme-grad-swap: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
   --theme-grad: linear-gradient(64deg, #75c3ff 0%, #ff5c9a 100%);
+  --theme-gs: grayscale(1);
 }
 
 .dark-mode {
@@ -253,6 +257,9 @@ h2.section-title.raw::after {
   --clr-gold: #af966b;
   --clr-white: #0e0e0e;
   --clr-off-black: #dddddd;
+  --clr-off-black-always: #0e0e0e;
+  --clr-hero-border: #231c1c;
+  --theme-gs: grayscale(1) brightness(0.6);
   --theme-grad: linear-gradient(64deg, #375e7c 0%, #521b30 100%);
   --theme-grad-swap: linear-gradient(64deg, #ff5c9a 0%, #75c3ff 100%);
 }
@@ -348,9 +355,9 @@ body {
   background-color: var(--color-primary);
   font-family: 'Lato', sans-serif;
   font-size: 1.1rem;
-  color: var(--color-black);
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  color: var(--clr-off-black);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   overflow-x: hidden;
 }
 
@@ -720,6 +727,7 @@ header > nav .topnav__logo svg.logo {
 
 div#postcard {
   background: #fafafa;
+  background: var(--clr-grey1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1204,7 +1212,6 @@ ruby.name rt {
   font-family: "Unica One";
   text-transform: uppercase;
   line-height: 1.2;
-  text-shadow: 0px 2px 0 white;
 }
 
 .blog p.snippet__meta {
@@ -1332,7 +1339,7 @@ h2.section-title {
 }
 
 section.appearances {
-  background-color: #eee;
+  background-color: var(--clr-grey1);
   padding-block: 3rem;
 }
 
@@ -1366,9 +1373,9 @@ section.blog {
 }
 
 #bgimage {
-  background-color: var(--clr-off-black);
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-off-black)), to(rgba(165, 165, 165, 0.4))), url("/assets/tr-coffee-front.webp"), url("/assets/tr-coffee-back.webp");
-  background-image: linear-gradient(to right, var(--clr-off-black), rgba(165, 165, 165, 0.4)), url("/assets/tr-coffee-front.webp"), url("/assets/tr-coffee-back.webp");
+  background-color: var(--clr-off-black-always);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-off-black-always)), to(rgba(165, 165, 165, 0.4))), url("/assets/tr-coffee-front.webp"), url("/assets/tr-coffee-back.webp");
+  background-image: linear-gradient(to right, var(--clr-off-black-always), rgba(165, 165, 165, 0.4)), url("/assets/tr-coffee-front.webp"), url("/assets/tr-coffee-back.webp");
   max-width: 100%;
   min-height: 41rem;
   background-size: 900px;
@@ -1557,8 +1564,8 @@ footer .container .fgrid .main {
 }
 
 footer .container .fgrid .main img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  -webkit-filter: var(--theme-gs);
+          filter: var(--theme-gs);
   border-radius: 50%;
   background: #e4dfd6;
   max-width: 4rem;
@@ -1788,8 +1795,12 @@ section.hero .container {
   background: var(--theme-grad);
   max-width: 950px;
   border-radius: 1rem;
-  -webkit-box-shadow: 1rem 1rem 0 0 var(--clr-off-black);
-          box-shadow: 1rem 1rem 0 0 var(--clr-off-black);
+  -webkit-box-shadow: 1rem 1rem 0 0 var(--clr-hero-border);
+          box-shadow: 1rem 1rem 0 0 var(--clr-hero-border);
+}
+
+section.hero .container h2 {
+  color: var(--clr-off-black);
 }
 
 section.intro {
@@ -2799,15 +2810,16 @@ details li {
   .contact-me .typewriter .typewrite {
     width: 100%;
   }
-  ul.articles__list.flow {
+  .blog ul.articles__list.flow {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .blog #rtb h2 {
-    font-size: 1rem;
-  }
-  .blog #rtb .post-date {
-    font-size: .8rem;
+  .blog li.cta {
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
   .intro .grid {
     -ms-grid-columns: 1fr;

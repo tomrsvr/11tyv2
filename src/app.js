@@ -1,3 +1,5 @@
+//typewriter effect
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -62,6 +64,15 @@ window.onload = function() {
      let element = document.body;
      element.classList.toggle('dark-mode');
  })
+
+
+//Toggle theme 2
+const themeBtn2 = document.querySelector('.theme-toggle');
+themeBtn2.addEventListener('click',() =>{
+    themeBtn2.classList.toggle('theme-toggle--toggled');
+    let element = document.body;
+    element.classList.toggle('dark-mode');
+})
 
 //Native animate on scroll (Fireship: https://www.youtube.com/watch?v=T33NN_pPeNI)
 const observer = new IntersectionObserver((entries) => {

@@ -74,6 +74,10 @@ themeBtn2.addEventListener('click',() =>{
     element.classList.toggle('dark-mode');
 })
 
+
+
+
+
 //Native animate on scroll (Fireship: https://www.youtube.com/watch?v=T33NN_pPeNI)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -124,92 +128,80 @@ let clickEvent = new Event('click');
 
 
 
-
 // Lazy Load Background Images
 
-document.addEventListener("DOMContentLoaded", function() {
-    var lazyloadImages;    
+// document.addEventListener("DOMContentLoaded", function() {
+//     var lazyloadImages;    
   
-    if ("IntersectionObserver" in window) {
-      lazyloadImages = document.querySelectorAll(".lazy");
-      var imageObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            var image = entry.target;
-            image.classList.remove("lazy");
-            imageObserver.unobserve(image);
-          }
-        });
-      });
+//     if ("IntersectionObserver" in window) {
+//       lazyloadImages = document.querySelectorAll(".lazy");
+//       var imageObserver = new IntersectionObserver(function(entries, observer) {
+//         entries.forEach(function(entry) {
+//           if (entry.isIntersecting) {
+//             var image = entry.target;
+//             image.classList.remove("lazy");
+//             imageObserver.unobserve(image);
+//           }
+//         });
+//       });
   
-      lazyloadImages.forEach(function(image) {
-        imageObserver.observe(image);
-      });
-    } else {  
-      var lazyloadThrottleTimeout;
-      lazyloadImages = document.querySelectorAll(".lazy");
+//       lazyloadImages.forEach(function(image) {
+//         imageObserver.observe(image);
+//       });
+//     } else {  
+//       var lazyloadThrottleTimeout;
+//       lazyloadImages = document.querySelectorAll(".lazy");
       
-      function lazyload () {
-        if(lazyloadThrottleTimeout) {
-          clearTimeout(lazyloadThrottleTimeout);
-        }    
+//       function lazyload () {
+//         if(lazyloadThrottleTimeout) {
+//           clearTimeout(lazyloadThrottleTimeout);
+//         }    
   
-        lazyloadThrottleTimeout = setTimeout(function() {
-          var scrollTop = window.pageYOffset;
-          lazyloadImages.forEach(function(img) {
-              if(img.offsetTop < (window.innerHeight + scrollTop)) {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-              }
-          });
-          if(lazyloadImages.length == 0) { 
-            document.removeEventListener("scroll", lazyload);
-            window.removeEventListener("resize", lazyload);
-            window.removeEventListener("orientationChange", lazyload);
-          }
-        }, 20);
-      }
+//         lazyloadThrottleTimeout = setTimeout(function() {
+//           var scrollTop = window.pageYOffset;
+//           lazyloadImages.forEach(function(img) {
+//               if(img.offsetTop < (window.innerHeight + scrollTop)) {
+//                 img.src = img.dataset.src;
+//                 img.classList.remove('lazy');
+//               }
+//           });
+//           if(lazyloadImages.length == 0) { 
+//             document.removeEventListener("scroll", lazyload);
+//             window.removeEventListener("resize", lazyload);
+//             window.removeEventListener("orientationChange", lazyload);
+//           }
+//         }, 20);
+//       }
   
-      document.addEventListener("scroll", lazyload);
-      window.addEventListener("resize", lazyload);
-      window.addEventListener("orientationChange", lazyload);
-    }
-  })
+//       document.addEventListener("scroll", lazyload);
+//       window.addEventListener("resize", lazyload);
+//       window.addEventListener("orientationChange", lazyload);
+//     }
+//   })
 
 
 
   // moving text
 
-  const first = document.getElementById("first")
-  const second = document.getElementById("second")
-  const container = document.getElementById("container")
-  const rect = container.getBoundingClientRect()
+  // const first = document.getElementById("first")
+  // const second = document.getElementById("second")
+  // const container = document.getElementById("container")
+  // const rect = container.getBoundingClientRect()
   
-  const animate = (element,position) => {
-       element.style.transform = `translateX(${position}px)`
-  } 
+  // const animate = (element,position) => {
+  //      element.style.transform = `translateX(${position}px)`
+  // } 
   
-         
-  
-  document.addEventListener('scroll', function(e) {
-    lastKnownScrollPosition = window.scrollY;
+  // document.addEventListener('scroll', function() {
+  //   lastKnownScrollPosition = window.scrollY;
       
-     window.requestAnimationFrame(function() {
-       
-        animate(first,lastKnownScrollPosition*.2)
-        animate(second,lastKnownScrollPosition*-.2)
-        
-      });
-  });
+  //    window.requestAnimationFrame(function() {   
+  //       animate(first,lastKnownScrollPosition*.2)
+  //       animate(second,lastKnownScrollPosition*-.2)
+  //     });
+  // });
 
-
-
-
-
-
-
-
-  // Wrap every letter in a span
+// Wrap every letter in a span
 var textWrapper = document.querySelector('.anim');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -231,33 +223,14 @@ anime.timeline({loop: false})
   });
 
 
+// FROM MILK
 
-  let constrain = 100;
-  let mouseOverContainer = document.getElementById("hero");
-  let postCard = document.getElementById("postcard");
+!function(){var e=document.querySelectorAll(".js-animation, .p-animate-title");if(0!=e.length){var t=new IntersectionObserver((function(e){e.forEach((function(e){e.isIntersecting&&!e.target.classList.contains("is-in-view")&&setTimeout((function(){e.target.classList.add("is-in-view")}),300)}))}),{root:null,rootMargin:"0% 0px",threshold:0});e.forEach((function(e){t.observe(e)}))}}();var r=n(755);
   
-  function transforms(x, y, el) {
-    let box = el.getBoundingClientRect();
-    let calcX = -(y - box.y - (box.height / 2)) / constrain;
-    let calcY = (x - box.x - (box.width / 2)) / constrain;
-    
-    return "perspective(900px) "
-      + "   rotateX("+ calcX +"deg) "
-      + "   rotateY("+ calcY +"deg) ";
-  };
-  
-   function transformElement(el, xyEl) {
-    el.style.transform  = transforms.apply(null, xyEl);
-  }
-  
-  mouseOverContainer.onmousemove = function(e) {
-    let xy = [e.clientX, e.clientY];
-    let position = xy.concat([postCard]);
-  
-    window.requestAnimationFrame(function(){
-      transformElement(postCard, position);
-    });
-  };
-  
+// .is-in-view{transform:scale(1)}
+// .is-in-view{opacity:1;transform:translateY(0) scale(1)}
+// .is-in-view{-webkit-animation:text-bound .5s ease-in-out .2s alternate forwards;animation:text-bound .5s ease-in-out .2s alternate forwards}
 
-  
+// .page-front #mainview .mainview-box__title .title-small{color:#fff;font-size:20px;margin-bottom:8px;margin-left:auto;margin-right:auto;opacity:0;transform:translateY(100%) scale(1.1);transition:transform .4s ease,opacity .5s ease;width:auto}
+
+// text-shadow: clamp(2px,.7056451613vw,7px) clamp(2px,.5040322581vw,5px) 0 #000;

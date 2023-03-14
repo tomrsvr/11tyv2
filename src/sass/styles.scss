@@ -1,4 +1,32 @@
 
+.hero2 span {
+  -webkit-text-stroke: 0.5px grey;
+  color: transparent;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+}
+.hero2 h1 {
+          position: relative;
+  text-transform: uppercase;
+  font-size: 4vw;
+  font-weight: 700;
+  font-weight: 300;
+  letter-spacing: 25px;
+  text-indent: 25px;
+  z-index: 2;
+  font-family: "Unica One";
+}
+
+
+section.oval:before {
+  content: '';
+  background: linear-gradient(180deg, #f2f2f1, transparent);
+  position: absolute;
+  inset: 0;
+  transform: skewY(-5deg);
+
+}
+
 
 // GLOBAL
 
@@ -163,12 +191,12 @@ section {
 }
 
 h2.section-title {
-  font-weight: 300;
-  font-size: 1.4rem; //RECHECK
+  font-weight: 200;
+  font-size: 1.8rem; //RECHECK
   letter-spacing: 6px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 0 2rem 0;
+  margin: 2rem 0 2rem 0;
   position: relative;
   z-index: 2;
   color: var(--clr-off-black);
@@ -340,7 +368,8 @@ html {
 
 body {
     background-color: var(--color-primary);
-    font-family: 'Lato', sans-serif;
+    // font-family: 'Lato', sans-serif;
+    font-family: 'Lexend', sans-serif;
     font-size: 1.1rem;
     color: var(--clr-off-black);
     transition: all 0.4s ease-in-out;
@@ -1055,15 +1084,12 @@ mark {
         
       } 
     
-    ruby.name {
-        font-size: 1.6rem;
-        margin-bottom: .8rem;
+    h1 .name {
+        display: inline!important;
+        line-height: revert!important;
+        font-size: 1.6rem!important;
+        letter-spacing: 0!important;
         color: var(--color-secondary);
-        rt {
-            font-size: .8rem;
-            font-weight: 300;
-            opacity: .6;
-      }
     }
 
 
@@ -1113,6 +1139,23 @@ mark {
       
     }
 
+
+.dark-mode {
+  .header-content {
+    background: linear-gradient(to bottom, #644828, rgba(0, 0, 0,.6)), url(/assets/tokyo.svg), linear-gradient(to bottom, #000, #1e1403);
+  
+    #postcard {
+      background: #1a1a1a;
+      img.stamp {
+        filter: invert(1);
+      }
+    } 
+  }
+
+  .skills li {
+    color: #d5d5d5;
+  }
+}
 
 // HP MEDIA
 
@@ -1266,14 +1309,7 @@ a.cta-link {
 // HP CTA / CONTACT ME
 
 
-h2.section-title {
-    font-weight: 300;
-    font-size: 1.4rem;
-    letter-spacing: 6px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0 0 2rem 0;
-  }
+
 
 section {
     &.appearances {
@@ -1318,10 +1354,10 @@ section {
   
   // Ref https://css-tricks.com/the-complete-guide-to-lazy-loading-images/#chapter-4-lazy-loading-css-background-images
   
-  #bgimage.lazy {
-    background-image: none;
-  }
-  #bgimage {
+  // #bgimage.lazy {
+  //   background-image: none;
+  // }
+  .bgimage {
     background-color: var(--clr-off-black-always);
     background-image: 
           linear-gradient(to right, var(--clr-off-black-always), rgba(165, 165, 165, 0.4)),
@@ -1353,7 +1389,6 @@ section {
 
 // HP SKILLS
 
-
 .skills {
   background-color: var(--clr-white);
   background-image: var(--washi);
@@ -1368,7 +1403,7 @@ section {
         left: -25%;
         top: -165%;
         // transform: translate(12%,-55%);
-        opacity: 1;
+        opacity: .1;
         // transition: animation 20s ease;
         animation: blob 40s 1s infinite;
         -webkit-animation: blob 40s 1s infinite;
@@ -1378,7 +1413,7 @@ section {
         position: absolute;
         left: 8rem;
         top: -86%;
-        opacity: .4;
+        opacity: .05;
         z-index: .5;
         animation: blob2 100s 1s infinite;
         -webkit-animation: blob2 100s 1s infinite;
@@ -1420,46 +1455,29 @@ section {
   max-width: 60rem;
   position: relative;
   z-index: 1;
-  font-size: 1.8rem;
-  transform: rotate(-4deg);
+  font-size: 1.4rem;
+  font-weight: 300;
+  // transform: rotate(-3deg);
   // animation: swing 15s ease-in-out 1s infinite alternate none;
   span {
     display: -webkit-box;
   }
-  span.row1 {
-    animation: right 15s ease-in-out 1s infinite alternate none;
-  }
-  span.row2 {
-    animation: left 15s ease-in-out 1s infinite alternate none;
-  }
+  
   li {
     margin: 0.25em;
     padding: 0.45em 1.4em;
     background: var(--clr-white);
     color: var(--clr-black-text);
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0 5px 20px -18px rgba(0,0,0,.7);
-    animation: swing 5s ease-in-out 1s infinite alternate none;
+    position: relative;
+    pointer-events: none;
+    // animation: swing 5s ease-in-out 1s infinite alternate none;
     &:hover {
         outline: 1px solid var(--clr-grey1);
     }
     }
   }
-
-  section.skills .container { max-width: inherit;}
-
-@keyframes swing {
-  0% { transform: rotate(-2deg); }
-  100% { transform: rotate(2deg); }
-}
-@keyframes right {
-  0% { transform: translate(-2%); }
-  100% { transform: translate(2%); }
-}
-@keyframes left {
-  0% { transform: translate(2%); }
-  100% { transform: translate(-2%); }
-}
 
 
 
@@ -1653,7 +1671,7 @@ span.medium {
     flex-wrap: wrap;
     justify-content: center;
     img {
-      max-height: 5rem;
+      max-height: 4rem;
       aspect-ratio: 3 / 2;
       object-fit: contain;
       filter: grayscale(1);
@@ -1665,6 +1683,9 @@ span.medium {
       }
     }
   }
+}
+.dark-mode .brands img {
+  filter: invert(1) grayscale(1);
 }
 
 
@@ -1740,6 +1761,8 @@ span.medium {
     }
     &.intro {
         background: var(--color-white);
+        position: relative;
+        padding: 6rem 0;
     }
 }
 
@@ -2060,31 +2083,30 @@ h3.subtitle {
 
 section.contact2 {
   position: relative;
-  margin: 5em;
+  // margin: 5em;
   picture {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 0;
     opacity: .15;
-    }
+    overflow: hidden;
+  }
 
   .container {
-    box-shadow: -1rem 1rem 0 0 var(--clr-off-black);
     border-radius: 20px;
     overflow: hidden;
     padding: 0;
-    border: 1px solid var(--clr-grey1);
     .hero-form {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-gap: 4em;
+      grid-gap: 3em;
       align-items: flex-start;
       align-content: flex-end;
       position: relative;
       z-index: 1;
       backdrop-filter: blur(18px);
-      padding: 4rem 6rem;
+      padding: 4rem 2rem;
     }
     
   }
@@ -2108,6 +2130,39 @@ section.contact2 {
   width: 50em;
   overflow: visible;
   opacity: 0.5;
+}
+
+
+
+.chat {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  p {
+    background: white;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    padding: 1rem;
+    font-weight: 300;
+    box-shadow: 0 5px 10px -10px rgba(0, 0, 0, .2);
+    &.right {
+      grid-column: 2;
+    }
+  }
+}
+
+.contact2 img.contact-avatar {
+  width: 50px;
+  height: 50px;
+  margin-top: 1em;
+  filter: brightness(1.2);
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  -webkit-animation: gradientx 12s ease infinite;
+  animation: gradientx 12s ease infinite;
+  background-size: 300% 100%;
+  justify-self: center;
 }
 
 
@@ -2164,12 +2219,11 @@ section.contact2 {
 }
 
 
-
 .contact2 .form-content {
   width: 400px;
   background: var(--clr-white);
   border-radius: 5px;
-  box-shadow: 0 30px 60px -12px rgba(50,50,93,0.25),0 18px 36px -18px rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px -20px rgba(50,50,93,0.15),0 18px 36px -30px rgba(0,0,0,0.2);
   padding: 16px;
   form .form-field {
     display: flex;
@@ -2184,7 +2238,7 @@ section.contact2 {
   button {
     float: right;
     margin-right: 1.4em;
-    background: var(--color-secondary);
+    background: var(--theme-grad);
     border: 0;
     color: white;
     padding: 0.8em 2em;
@@ -2244,19 +2298,19 @@ section.contact2 {
 
 
 h2.page-title {
-  font-family: "Unica One";
   text-transform: uppercase;
+  max-width: 32rem;
 }
 
 span.title-label {
-  font-weight: 300;
-  font-size: 1rem;
+  font-weight: 200;
+  font-size: .9rem;
   letter-spacing: 7px;
   text-transform: uppercase;
   border-bottom: 1px solid var(--clr-gold);
-  padding-bottom: 7px;
+  padding-bottom: 1rem;
   display: inline-block;
-  margin-bottom: 3px;
+  margin-bottom: 1rem;
 }
 
 
@@ -2357,26 +2411,7 @@ margin: .4rem 0 1.2rem 3rem;
 // Experiments
 
 
-#about #container {
-  span {
-    font-size: 13em;
-    font-weight: 900;
-    text-transform: uppercase;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: white;
-    opacity: .4;
-    color: transparent;
-    position: absolute;
-    pointer-events: none;
-    width: 300%;
-    &#first {
 
-    }
-    &#second {
-      top: 10%;
-    }
-  }
-}
 
 
 @import './media';
